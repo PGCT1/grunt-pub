@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 			target:'www'
 		});
 
-		process.chdir(options.root)
+		process.chdir(options.root);
 
 		exec("pub build " + options.target, function (error, stdout, stderr) {
 			grunt.log.writeln("Error code:" + error);
@@ -21,4 +21,4 @@ module.exports = function(grunt) {
 
 	}, this.async());
 
-});
+};
