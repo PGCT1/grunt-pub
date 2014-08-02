@@ -2,10 +2,7 @@
 
 module.exports = function (grunt) {
 
-	grunt.initConfig({
-		root:'.',
-		target:'www'
-	});
+	grunt.initConfig({});
 
 	console.log('ping')
 

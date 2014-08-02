@@ -1,18 +1,24 @@
 'use strict';
 
-var exec = require('child_process').exec;
+var process = require('child_process');
+var exec = process.exec
 
 module.exports = function(grunt) {
 
 	grunt.registerMultiTask('pub', 'Executing pub build...', function() {
 
-			exec("pub build", function (error, stdout, stderr) {
-				grunt.log.writeln("Error code:" + error);
-				next(error);
-			});
+		var options = this.options({
+			root:'.',
+			target:'www'
+		});
 
-		}, this.async());
+		process.chdir(options.root)
 
-	});
+		exec("pub build " + options.target, function (error, stdout, stderr) {
+			grunt.log.writeln("Error code:" + error);
+			next(error);
+		});
 
-};
+	}, this.async());
+
+});
