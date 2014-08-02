@@ -19,6 +19,6 @@ module.exports = function(grunt) {
 			next(error);
 		});
 
-	}, this.async());
+	});
 
 };
