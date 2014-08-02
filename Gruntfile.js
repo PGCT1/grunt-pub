@@ -2,7 +2,12 @@
 
 module.exports = function (grunt) {
 
-	grunt.initConfig({});
+	grunt.initConfig({
+		root:'.',
+		target:'www'
+	});
+
+	console.log('ping')
 
 	grunt.loadTasks('tasks');
 
