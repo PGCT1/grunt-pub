@@ -15,3 +15,5 @@ grunt.config.set('pub', {
 
 grunt.loadNpmTasks('grunt-pub');
 ```
+
+This will execute "pub build public" in the .tmp folder of the current directory
