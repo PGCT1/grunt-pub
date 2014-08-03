@@ -7,9 +7,9 @@ Dart Pub automation for Grunt
 
 ```sh
 grunt.config.set('pub', {
-		options: {
-			root:'./.tmp',
-			target:'public'
+	options: {
+		root:'./.tmp',
+		target:'public'
 	}
 });
 
